@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/Img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/534f6dae03.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html"><img class="logo" src="../assets/Img/logo.svg" alt="logo burger" /></a>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../vistas/menu.html">Menu</a></li>
+                <li><a href="../vistas/contacto.html">Contacto</a></li>
+                <li><a href="../vistas/nosotros.html">Nosotros</a></li>
+                <li><a href="../vistas/login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header_2">
+            <p>Contactanos</p>
+        </div>
+    </header>
+    <main>
+        <div class="contact_form">
+            <div class="formulario">
+                <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+                <form action="#" method="post">
+                    <p>
+                        <label for="nombre" class="colocar_nombre">Nombre
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                            placeholder="Escribe tu nombre">
+                    </p>
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio"
+                            placeholder="Escribe tu Email">
+                    </p>
+                    <p>
+                        <label for="asunto" class="colocar_asunto">Asunto
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
+                            placeholder="Escribe un asunto">
+                    </p>
+                    <p>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+                            placeholder="Deja aquí tu comentario..."></textarea>
+                    </p>
+                    <button type="submit" name="enviar_formulario" id="enviar">
+                        <p>Enviar</p>
+                    </button>
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-principal">
+            <div class="about">
+                <h3>BURGer Dev</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+                    voluptatem corporis error non,
+                </p>
+                <div class="social">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-brands fa-instagram-square"></i>
+                    <i class="fa-brands fa-whatsapp-square"></i>
+                </div>
+            </div>
+            <div class="links">
+                <h3>Navegacion</h3>
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="../vistas/menu.html">Menu</a>
+                    </li>
+                    <li>
+                        <a href="../vistas/nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="../vistas/contacto.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="../vistas/login.html">Login</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="subscribe">
+                <h3>Newsletter</h3>
+
+                <input type="email" placeholder="Ingrese su email" />
+                <button>Subscribirse</button>
+
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
