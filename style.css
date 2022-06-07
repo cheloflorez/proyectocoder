@@ -62,8 +62,11 @@ p {
 }
 
 .header_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #121212;
-    height: 30vh;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,56 +76,9 @@ p {
 .header_2 p {
     color: white;
     font-family: 'Bebas Neue', cursive;
-    text-align: center;
     font-size: 50px;
     padding-top: 100px;
 }
-
-/* Hero Seccion */
-
-/* .hero {
-    display: flex;
-    align-items: center;
-    background-image: url("./assets/Img/1-home.jpg");
-    height: 100vh;
-    width: 100%;
-    background-position: right center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-left: 100px;
-    align-items: flex-start;
-}
-
-.hero h1 {
-    font-size: 5rem;
-    color: #FFFFFF;
-    background-color: transparent;
-}
-
-.hero p {
-    color: #FFFFFF;
-    width: 30%;
-    font-size: 3rem;
-    text-align: start;
-    background-color: transparent;
-    text-transform: capitalize;
-}
-
-.hero button {
-    font: normal normal 600 16px/24px Poppins;
-    color: #FFFFFF;
-    width: 121px;
-    height: 51px;
-    background: #F5B029 0% 0% no-repeat padding-box;
-    border-radius: 26px;
-    opacity: 1;
-} */
 
 .carousel-item img {
     max-height:800px;
