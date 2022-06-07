@@ -46,39 +46,19 @@ p {
 
 /* Header */
 
-.navbar {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    background-color: #121212;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    top: 0;
+.nav-link {
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
 }
 
-.navbar li {
-    display: inline;
-    margin: 0 10px;
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
 }
 
-.navbar ul {
-    margin-top: 10px;
-    margin-left: 120px;
-    font-size: 2rem;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.logo {
-    position: absolute;
-    width: 59px;
-    height: 60px;
-    left: 3rem;
-    top: 10px;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #D6BD9A;
 }
 
 .header_2 {
@@ -100,7 +80,7 @@ p {
 
 /* Hero Seccion */
 
-.hero {
+/* .hero {
     display: flex;
     align-items: center;
     background-image: url("./assets/Img/1-home.jpg");
@@ -142,7 +122,11 @@ p {
     background: #F5B029 0% 0% no-repeat padding-box;
     border-radius: 26px;
     opacity: 1;
-}
+} */
+
+.carousel-inner img {
+    max-height:800px;
+  }
 
 /* Footer  */
 
@@ -198,11 +182,35 @@ ul li a:hover {
     color: #2a8ded;
 }
 
-
-button {
+.subscribe button {
     color: #ffffff;
     font-size: 1.5rem;
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
 }
+
+.subscribe input {
+        background-color: #fbfbfb;
+        width: 408px;
+        height: 40px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
 
 .social {
     display: flex;
@@ -329,7 +337,7 @@ button {
 
 /* HTML CONTACO */
 
-.contact_form {
+/* .contact_form {
     width: 460px;
     height: auto;
     margin: 20px auto;
@@ -427,7 +435,7 @@ span {
 .formulario textarea:focus {
     outline: 0;
     border: 1px solid #97d848;
-}
+} */
 
 /* HTML MENU */
 
