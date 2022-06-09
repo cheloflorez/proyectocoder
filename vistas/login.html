@@ -45,31 +45,24 @@
             <p>Login</p>
         </div>
     </header>
-    <main>
-        <div class="contact_form">
-            <div class="formulario">
-                <h3>Ingresa a nuestro sitio</h3>
-                <form action="#" method="post">
-                    <p>
-                        <label for="email" class="colocar_email">Email
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio"
-                            placeholder="Escribe tu Email">
-                    </p>
-                    <p>
-                        <label for="password" class="colocar_asunto">Password
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="password" name="password" id="password" required="obligatorio"
-                            placeholder="Ingrese su contraseña">
-                    </p>
-                    <button type="submit" name="login" id="login">
-                        <p>Ingresar</p>
-                </form>
-            </div>
+        <div class="container mt-5 mb-5 " >
+            <h1 class="text-center">Ingresa a nuestra pagina.</h1>
+            <div class="row justify-content-center align-items-center">
+            <form class="col-md-4">
+                <div class="col-md-12 text-center">
+                    <label for="userName" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="userName" required>
+                </div>
+                <div class="col-md-12 text-center mt-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="col-md-12 text-center p-3">
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </div>
+            </form>
         </div>
-    </main>
+        </div>
     <footer>
         <div class="footer-principal">
             <div class="about">
@@ -116,8 +109,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
