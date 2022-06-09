@@ -181,8 +181,11 @@ ul li a:hover {
 /* Seccion productos destacados */
 
 .productos-texto {
+    color: #FAFAFA;
     text-align: center;
-    margin: 5% 20%;
+    margin: 5% 0% 5% 0%;
+    padding: 2%;
+    background-color: #212529;
 }
 
 .productos-items {
@@ -204,6 +207,7 @@ ul li a:hover {
 }
 
 .card img {
+    max-height: 230px;
     border-radius: 20px 20px 0px 0px;
     transition: 0.5s;
 }
