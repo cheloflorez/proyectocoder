@@ -151,57 +151,37 @@ ul li a:hover {
   padding: 3%;
   background-color: #212529; }
 
-.productos-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 5%; }
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px; }
-
-.productos-items p {
-  font-size: 1.2rem;
-  padding: 10px; }
-
-.card img {
-  max-height: 230px;
-  border-radius: 20px 20px 0px 0px;
-  transition: 0.5s; }
-
-.card:hover {
-  transform: scale(1.1, 1.1); }
+  .card img {
+    max-height: 230px;
+    border-radius: 20px 20px 0px 0px;
+    transition: 0.5s; }
+  .card:hover {
+    transform: scale(1.1, 1.1); }
 
 /* HTML INDEX */
 /* Seccion Nosotros */
-.nosotros_img {
-  margin: 5% 5% 5% 10%;
-  width: 70%; }
-
-.blog {
+.blog, .blog-reverse {
   display: flex;
-  background-color: transparent;
-  align-items: center; }
+  align-items: center;
+  flex-direction: row;
+  background-color: transparent; }
+  .blog img, .blog-reverse img {
+    margin: 5% 5% 5% 10%;
+    width: 40%; }
+  .blog__text {
+    margin: 5% 10% 5% 10%;
+    text-align: center;
+    width: 60%; }
 
-.blog2 {
-  display: flex;
-  background-color: transparent;
-  flex-direction: row-reverse;
-  align-items: center; }
-
-.blog-img {
-  margin: 5% 5% 5% 10%;
-  width: 70%; }
-
-.blog-img img {
-  width: 100%; }
-
-.blog-text {
-  margin: 5% 10% 5% 10%;
-  text-align: center;
-  width: 60%; }
+.blog-reverse {
+  flex-direction: row-reverse; }
+  .blog-reverse__text {
+    margin: 5% 10% 5% 10%;
+    text-align: center;
+    width: 60%; }
 
 /* HTML INDEX */
 /* Social Media */
@@ -282,7 +262,7 @@ ul li a:hover {
     display: none; }
   .footer-principal {
     grid-template-columns: 1fr; }
-  .blog, .blog2 {
+  .blog, .blog-reverse, .blog-reverse {
     flex-direction: column-reverse;
     align-items: center; }
   .blog-text {

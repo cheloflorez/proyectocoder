@@ -1,0 +1,6 @@
+@mixin flex-box ($ai , $fd){
+    display: flex;
+    align-items: $ai;
+    flex-direction: $fd;
+    background-color: transparent;
+}
