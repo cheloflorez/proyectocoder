@@ -3,7 +3,7 @@
   padding: 0; }
 
 body {
-  background: #FAFAFA;
+  background: white;
   padding-top: 96px;
   display: grid;
   height: 100vh;
@@ -17,7 +17,7 @@ a {
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.2rem; }
+  font-size: 1.8rem; }
 
 h2 {
   font-family: 'Poppins', sans-serif;
@@ -40,16 +40,17 @@ p {
   font-weight: normal; }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: white; }
+  color: white;
+  font-weight: 600; }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #D6BD9A; }
+  color: #2a8ded; }
 
 .header_2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #121212;
+  background-color: #212529;
   height: 300px;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,8 +62,8 @@ p {
   font-size: 50px; }
 
 footer {
-  background-color: #121315;
-  color: #a7a7a7;
+  background-color: #212529;
+  color: white;
   font-size: 16px; }
 
 footer * {
@@ -98,14 +99,14 @@ footer * {
   margin: 0; }
 
 ul li a {
-  color: #a7a7a7;
+  color: white;
   text-decoration: none; }
 
 ul li a:hover {
   color: #2a8ded; }
 
 .subscribe button {
-  color: #ffffff;
+  color: white;
   font-size: 1.1rem;
   height: 45px;
   padding-left: 5px;
@@ -121,7 +122,7 @@ ul li a:hover {
   cursor: pointer; }
 
 .subscribe input {
-  background-color: #fbfbfb;
+  background-color: white;
   width: 408px;
   height: 40px;
   border-radius: 5px;
@@ -140,12 +141,12 @@ ul li a:hover {
   margin-top: 10px; }
 
 .social i {
-  color: #bac6d9; }
+  color: white; }
 
 /* HTML INDEX */
 /* Seccion productos destacados */
 .productos-texto {
-  color: #FAFAFA;
+  color: white;
   text-align: center;
   margin: 5% 0% 5% 0%;
   padding: 3%;
@@ -245,7 +246,7 @@ ul li a:hover {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: #000;
+  background-color: black;
   text-align: center;
   cursor: pointer;
   width: 100%;

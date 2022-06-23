@@ -1,6 +1,6 @@
 footer {
-    background-color: #121315;
-    color: #a7a7a7;
+    background-color: map-get($colores , "header-bg" );
+    color: map-get($colores , "blanco" );
     font-size: 16px;
 }
 
@@ -42,7 +42,7 @@ footer * {
 }
 
 ul li a {
-    color: #a7a7a7;
+    color: map-get($colores , "blanco" );
     text-decoration: none;
 }
 
@@ -51,7 +51,7 @@ ul li a:hover {
 }
 
 .subscribe button {
-    color: #ffffff;
+    color: map-get($colores , "blanco" );
     font-size: 1.1rem;
     height: 45px;
     padding-left: 5px;
@@ -68,7 +68,7 @@ ul li a:hover {
 }
 
 .subscribe input {
-        background-color: #fbfbfb;
+        background-color: map-get($colores , "blanco" );
         width: 408px;
         height: 40px;
         border-radius: 5px;
@@ -89,5 +89,5 @@ ul li a:hover {
 }
 
 .social i {
-    color: #bac6d9;
+    color: map-get($colores , "blanco" );
 }
