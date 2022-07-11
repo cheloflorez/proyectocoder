@@ -1,12 +1,19 @@
 /* HTML INDEX */
+/* CAROUSEL */
+
+.carousel-item img {
+    max-height: 600px;
+ }
+
+/* HTML INDEX */
 /* Seccion productos destacados */
 
 .productos-texto {
-    color: map-get($colores , "blanco" );
+    color: map-get($colores , "blanco");
     text-align: center;
     margin: 5% 0% 5% 0%;
     padding: 3%;
-    background-color:  map-get($colores , "header-bg" );
+    background-color: map-get($colores , "header-bg");
 }
 
 .card {
@@ -59,87 +66,29 @@
 /* Social Media */
 
 .socialMedia {
-    background-color: map-get($colores, "negro" );
-    display: flex;
-    flex-direction: column;
-    width: 4vw;
+    @include flex-box (center, column);
     position: fixed;
+    background-color: map-get($colores, "negro");
+    width: 4vw;
     top: 200px;
-    align-items: center;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    i {
+        color: map-get($colores , "blanco");
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    i:hover {
+        text-shadow: 1px 1px 2px map-get($colores , "blanco"), 0 0 30px map-get($colores , "blancosmk"), 0 0 15px map-get($colores , "gris");
+    }
 }
 
-.socialMedia:hover {
-    width: 4vw;
-    transition: all .2s linear;
-}
-
-.socialMedia i {
-    color: map-get($colores , "blanco" );
-    font-size: 30px;
-    padding: 10px;
-}
-
-.socialMedia i:hover {
-    text-shadow: 1px 1px 2px map-get($colores , "blanco" ), 0 0 30px map-get($colores , "blancosmk" ), 0 0 15px map-get($colores , "gris" );
-}
 
 /* HTML MENU */
 
 .menu_texto {
     margin: 3% 20% 3% 20%;
     text-align: center;
-}
-
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-    justify-content: center;
-}
-
-.card_menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 200px;
-    margin: 7px;
-    font-family: arial;
-    border-radius: 20px;
-}
-
-.card_menu img {
-    border-radius: 20px 20px 0px 0px;
-    width: 100%;
-    height: 122px;
-}
-
-.price {
-    color: map-get($colores , "gris" );
-    font-size: 22px;
-}
-
-.card_menu button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: map-get($colores , "blanco" );
-    background-color: map-get($colores , "negro" );
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 12px;
-}
-
-.card_menu button:hover {
-    opacity: 0.7;
-}
-
-.carousel-item img {
-    max-height: 600px;
-
 }
