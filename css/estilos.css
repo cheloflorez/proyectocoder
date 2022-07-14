@@ -3,7 +3,7 @@
   padding: 0; }
 
 body {
-  background: white;
+  background: #dedede;
   padding-top: 96px;
   display: grid;
   height: 100vh;
@@ -142,11 +142,6 @@ ul li a:hover {
 
 .social i {
   color: white; }
-
-/* HTML INDEX */
-/* CAROUSEL */
-.carousel-item img {
-  max-height: 600px; }
 
 /* HTML INDEX */
 /* Seccion productos destacados */
