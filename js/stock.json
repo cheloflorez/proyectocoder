@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Alemana", 
+        "price": 800,
+        "description":"Pan de semillas,medallón 200 gr, queso cheddar, tomate, ketchup, mostaza, cebolla y panceta en cubos. Incluye papas.",
+        "image": "../assets/Img/burguers/alemana.jpg"
+    },
+
+    {
+        "title": "Americana", 
+        "price": 750, 
+        "description":"Pan de queso, medallon de carne de 200 gr, queso cheddar, panceta, tomate, cebolla crispy y bbq. Incluye papas.",
+        "image": "../assets/Img/burguers/americana.jpg"
+    },
+    {
+        "title": "Española", 
+        "price": 600,
+        "description":"Pan de semillas, medallón de 200 gr, cheddar, pimientos asados, tortilla de papas pay, tomate y mayonesa.",
+        "image": "../assets/Img/burguers/española.jpg"
+    }
+]
