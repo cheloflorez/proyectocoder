@@ -32,7 +32,6 @@ function mostrarProductos(array) {
             </div>
                         `;
     contenedorProductos.appendChild(div);
-
     const Clickbutton = document.querySelectorAll('#button')
     Clickbutton.forEach(btn => {
       btn.addEventListener('click', addtoCarritoItem)
@@ -62,8 +61,7 @@ function addItemCarrito(newItem) {
   for (let i = 0; i < carrito.length; i++) {
     if (carrito[i].title.trim() === newItem.title.trim()) {
       carrito[i].cantidad++;
-      const inputValue = InputElemnto[i]
-      inputValue.value++;
+      InputElemnto[i].value++;
       CarritoTotal()
       return null;
     }
@@ -77,7 +75,7 @@ function renderCarrito() {
   carrito.map(item => {
     const tr = document.createElement('tr')
     tr.classList.add('ItemCarrito')
-    const Content = `
+    tr.innerHTML += `
         <th scope="row">1</th>
         <td class="table__productos">
             <img src=${item.img} alt="">
@@ -89,7 +87,6 @@ function renderCarrito() {
             <button class="delete btn btn-danger">X</button>
         </td>
         `
-    tr.innerHTML = Content;
     tbody.appendChild(tr)
     tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
     tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
@@ -101,7 +98,8 @@ function CarritoTotal() {
   let Total = 0;
   const itemCartTotal = document.querySelector('.itemCartTotal')
   carrito.forEach((item) => {
-    const precio = Number(item.precio.replace("$", ''))
+    const precio = parseInt(item.precio)
+    console.log(precio)
     Total = Total + precio * item.cantidad
   })
   itemCartTotal.innerHTML = `Total $${Total}`
