@@ -1,4 +1,5 @@
 const tbody2 = document.querySelector('#tbody2')
+
 function renderCarrito2() {
     const storage = JSON.parse(localStorage.getItem('carrito'));
     tbody2.innerHTML = ''

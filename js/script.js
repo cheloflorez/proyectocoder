@@ -8,9 +8,9 @@ fetch("../js/stock.json")
   .then((resp) => resp.json())
   .then((datos) => {
     datos.forEach((e) => {
-      stockProductos.push(e);
-      mostrarProductos(stockProductos);
+      stockProductos.push(e);     
     });
+    mostrarProductos(stockProductos);
   });
 
 function mostrarProductos(array) {
