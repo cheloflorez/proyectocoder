@@ -1,21 +1,44 @@
 [
-    {
+    {   
+        "id": 1,
         "title": "Alemana", 
         "price": 800,
         "description":"Pan de semillas,medallón 200 gr, queso cheddar, tomate, ketchup, mostaza, cebolla y panceta en cubos. Incluye papas.",
         "image": "../assets/Img/burguers/alemana.jpg"
     },
-
     {
+        "id": 2,
         "title": "Americana", 
         "price": 750, 
         "description":"Pan de queso, medallon de carne de 200 gr, queso cheddar, panceta, tomate, cebolla crispy y bbq. Incluye papas.",
         "image": "../assets/Img/burguers/americana.jpg"
     },
     {
+        "id": 3,
         "title": "Española", 
         "price": 600,
         "description":"Pan de semillas, medallón de 200 gr, cheddar, pimientos asados, tortilla de papas pay, tomate y mayonesa.",
         "image": "../assets/Img/burguers/española.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Tana", 
+        "price": 650, 
+        "description":"Pan de queso, medallon de carne de 200 gr, queso cheddar, panceta, tomate, cebolla crispy y bbq. Incluye papas.",
+        "image": "../assets/Img/burguers/tana.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Smash", 
+        "price": 850, 
+        "description":"Pan de queso, medallon de carne de 200 gr, queso cheddar, panceta, tomate, cebolla crispy y bbq. Incluye papas.",
+        "image": "../assets/Img/burguers/smash.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Vegetariana", 
+        "price": 900, 
+        "description":"Pan de queso, medallon de carne de 200 gr, queso cheddar, panceta, tomate, cebolla crispy y bbq. Incluye papas.",
+        "image": "../assets/Img/burguers/vegetariana.jpg"
     }
 ]

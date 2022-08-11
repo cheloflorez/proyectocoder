@@ -27,32 +27,25 @@ function mostrarProductos(array) {
                 </div>
                 <div class="card-footer text-center">
                     <h5 class="text-primary">Precio : <span class="precio"> ${item.price} </span></h5>
-                    <button type="button" id="button" class="btn btn-dark">Agregar</button>
+                    <button type="button" id='btn${item.id}' class="btn btn-dark">Agregar</button>
                 </div>
             </div>
                         `;
     contenedorProductos.appendChild(div);
-    const Clickbutton = document.querySelectorAll('#button')
-    Clickbutton.forEach(btn => {
-      btn.addEventListener('click', addtoCarritoItem)
-    })
+    document.getElementById(`btn${item.id}`).addEventListener("click",function(){
+      addtoCarritoItem(item);    
+  });
   })
 }
 
 function addtoCarritoItem(e) {
-  const button = e.target
-  const item = button.closest('.card')
-  const itemTitle = item.querySelector('.card-title').textContent
-  const itemPrice = item.querySelector('.precio').textContent
-  const itemImg = item.querySelector('.card-img-top').src
-
   const newItem = {
-    title: itemTitle,
-    precio: itemPrice,
-    img: itemImg,
+    id : e.id,
+    title: e.title,
+    precio: e.price,
+    img: e.image,
     cantidad: 1
   }
-
   addItemCarrito(newItem)
 }
 
@@ -76,7 +69,7 @@ function renderCarrito() {
     const tr = document.createElement('tr')
     tr.classList.add('ItemCarrito')
     tr.innerHTML += `
-        <th scope="row">1</th>
+        <th scope="row">${item.id}</th>
         <td class="table__productos">
             <img src=${item.img} alt="">
             <h6 class="title">${item.title}</h6>
@@ -93,28 +86,6 @@ function renderCarrito() {
   })
   CarritoTotal()
 }
-
-// function renderCarrito2() {
-//   const storage = JSON.parse(localStorage.getItem('carrito'));
-//   tbody2.innerHTML = ''
-//   storage.map(item => {
-//     const tr = document.createElement('tr')
-//     tr.classList.add('ItemCarrito')
-//     tr.innerHTML += `
-//     <td class="table__productos">
-//         <img src=${item.img} alt="">
-//     </td>
-//     <td class="table__productos>
-//     <h6 class="title">${item.title}</h6>
-// </td>
-// <td class="table__cantidad">
-// <h6>${item.cantidad}</h6>
-// </td>
-//     <td class="table__precio">${item.precio}</td>
-//         `
-//     tbody2.appendChild(tr)
-//   })
-// }
 
 function CarritoTotal() {
   let Total = 0;
