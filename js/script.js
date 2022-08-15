@@ -57,6 +57,15 @@ function addItemCarrito(newItem) {
       return null;
     }
   }
+  Toastify({
+    text: "Producto Agregado !",
+    duration: 3000,
+    gravity: "bottom",
+    position: "right", 
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+}).showToast();
   carrito.push(newItem)
   renderCarrito()
 }
@@ -110,6 +119,15 @@ function removeItemCarrito(e) {
     }
   }
   tr.remove()
+  Toastify({
+    text: "Producto Eliminado !",
+    duration: 3000,
+    gravity: "bottom",
+    position: "right", 
+    style: {
+      background: "#DC143C",
+    },
+}).showToast();
   CarritoTotal()
 }
 
@@ -121,6 +139,12 @@ function sumaCantidad(e) {
     if (item.title.trim() === title) {
       sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value;
       item.cantidad = sumaInput.value;
+      Toastify({
+        text: "Cantidad Cambiada !",
+        duration: 3000,
+        gravity: "bottom",
+        position: "right", 
+    }).showToast();
       renderCarrito()
       CarritoTotal()
     }
@@ -128,8 +152,16 @@ function sumaCantidad(e) {
 }
 
 document.querySelector("#vaciar").addEventListener('click', vaciarCarrito)
-
 function vaciarCarrito() {
+  Toastify({
+    text: "Carrito Vaciado !",
+    duration: 3000,
+    gravity: "bottom",
+    position: "right",
+    style: {
+      background: "#DC143C",
+    },
+}).showToast();
   carrito = []
   renderCarrito()
 }
