@@ -44,7 +44,7 @@ function addtoCarritoItem(e) {
     title: e.title,
     precio: e.price,
     img: e.image,
-    cantidad: 1
+    cantidad: 1,
   }
   addItemCarrito(newItem)
 }
@@ -79,6 +79,7 @@ function renderCarrito() {
             <input type="number" min="1" value=${item.cantidad} class="input__elemento">
             <button class="delete btn btn-danger">X</button>
         </td>
+        <td class="table__subtotal">${item.precio * item.cantidad}</td>
         `
     tbody.appendChild(tr)
     tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
@@ -121,6 +122,7 @@ function sumaCantidad(e) {
     if (item.title.trim() === title) {
       sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value;
       item.cantidad = sumaInput.value;
+      renderCarrito()     
       CarritoTotal()
     }
   })

@@ -16,7 +16,7 @@ function renderCarrito2() {
   <td class="table__cantidad">
   <h6>${item.cantidad}</h6>
   </td>
-      <td class="table__precio">${item.precio}</td>
+      <td class="table__precio">${item.precio * item.cantidad}</td>
           `
       tbody2.appendChild(tr)
     })
