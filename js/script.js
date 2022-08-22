@@ -58,13 +58,7 @@ function addItemCarrito(newItem) {
     carrito.push(newItem)
   } else {
     const itemIndex = carrito.findIndex((el) => el.title.trim() == newItem.title.trim());
-    if (itemIndex !== -1) {
-      carrito[itemIndex].cantidad++;
-      InputElemnto[itemIndex].value++;
-      CarritoTotal();
-    } else {
-      carrito.push(newItem)
-    }
+    itemIndex !== -1 ? (carrito[itemIndex].cantidad++, InputElemnto[itemIndex].value++, CarritoTotal()) : carrito.push(newItem)
   }
   Toastify({
     text: "Producto Agregado !",
