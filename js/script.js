@@ -55,12 +55,7 @@ function addtoCarritoItem(e) {
 function addItemCarrito(newItem) {
   const InputElemnto = tbody.getElementsByClassName('input__elemento')
   for (let i = 0; i < carrito.length; i++) {
-    if (carrito[i].title.trim() === newItem.title.trim()) {
-      carrito[i].cantidad++;
-      InputElemnto[i].value++;
-      CarritoTotal()
-      return null;
-    }
+    carrito[i].title.trim() === newItem.title.trim() ? (carrito[i].cantidad++, InputElemnto[i].value++, CarritoTotal()) : null;
   }
   Toastify({
     text: "Producto Agregado !",
@@ -120,10 +115,7 @@ function removeItemCarrito(e) {
   const tr = buttonDelete.closest(".ItemCarrito")
   const title = tr.querySelector('.title').textContent;
   for (let i = 0; i < carrito.length; i++) {
-
-    if (carrito[i].title.trim() === title.trim()) {
-      carrito.splice(i, 1)
-    }
+    carrito[i].title.trim() === title.trim() ? carrito.splice(i, 1) : null;
   }
   tr.remove()
   Toastify({
@@ -175,13 +167,13 @@ function vaciarCarrito() {
 }
 
 // Finalizar compra
-function comprarCarrito(){
+function comprarCarrito() {
   Swal.fire({
     title: 'Compra Realizada!',
     text: 'Pulsa aceptar para seguir comprando !',
     icon: 'success',
     confirmButtonText: 'Aceptar'
-})
+  })
   carrito = []
   renderCarrito()
 }
@@ -193,8 +185,5 @@ function addLocalStorage() {
 
 window.onload = function () {
   const storage = JSON.parse(localStorage.getItem('carrito'));
-  if (storage) {
-    carrito = storage;
-    renderCarrito()
-  }
+  storage ? (carrito = storage, renderCarrito()) : null
 }
