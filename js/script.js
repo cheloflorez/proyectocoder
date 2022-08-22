@@ -54,8 +54,17 @@ function addtoCarritoItem(e) {
 
 function addItemCarrito(newItem) {
   const InputElemnto = tbody.getElementsByClassName('input__elemento')
-  for (let i = 0; i < carrito.length; i++) {
-    carrito[i].title.trim() === newItem.title.trim() ? (carrito[i].cantidad++, InputElemnto[i].value++, CarritoTotal()) : null;
+  if (carrito.length === 0) {
+    carrito.push(newItem)
+  } else {
+    const itemIndex = carrito.findIndex((el) => el.title.trim() == newItem.title.trim());
+    if (itemIndex !== -1) {
+      carrito[itemIndex].cantidad++;
+      InputElemnto[itemIndex].value++;
+      CarritoTotal();
+    } else {
+      carrito.push(newItem)
+    }
   }
   Toastify({
     text: "Producto Agregado !",
@@ -66,7 +75,6 @@ function addItemCarrito(newItem) {
       background: "linear-gradient(to right, #00b09b, #96c93d)",
     },
   }).showToast();
-  carrito.push(newItem)
   renderCarrito()
 }
 
@@ -115,7 +123,7 @@ function removeItemCarrito(e) {
   const tr = buttonDelete.closest(".ItemCarrito")
   const title = tr.querySelector('.title').textContent;
   for (let i = 0; i < carrito.length; i++) {
-    carrito[i].title.trim() === title.trim() ? carrito.splice(i, 1) : null;
+    carrito[i].title.trim() === title.trim() && carrito.splice(i, 1);
   }
   tr.remove()
   Toastify({
@@ -136,18 +144,18 @@ function sumaCantidad(e) {
   const tr = sumaInput.closest(".ItemCarrito")
   const title = tr.querySelector('.title').textContent;
   carrito.forEach(item => {
-    if (item.title.trim() === title) {
-      sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value;
-      item.cantidad = sumaInput.value;
+    item.title.trim() === title && (
+      sumaInput.value < 1 ? (sumaInput.value = 1) : parseInt(sumaInput.value),
+      item.cantidad = parseInt(sumaInput.value),
       Toastify({
         text: "Cantidad Cambiada !",
         duration: 3000,
         gravity: "bottom",
         position: "right",
-      }).showToast();
-      renderCarrito()
+      }).showToast(),
+      renderCarrito(),
       CarritoTotal()
-    }
+    )
   })
 }
 
@@ -185,5 +193,5 @@ function addLocalStorage() {
 
 window.onload = function () {
   const storage = JSON.parse(localStorage.getItem('carrito'));
-  storage ? (carrito = storage, renderCarrito()) : null
+  storage && (carrito = storage, renderCarrito())
 }
