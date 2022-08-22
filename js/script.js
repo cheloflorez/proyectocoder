@@ -41,12 +41,12 @@ const mostrarProductos = async () => {
 mostrarProductos()
 
 // Agregando productos al carrito
-function addtoCarritoItem(e) {
+function addtoCarritoItem(item) {
   const newItem = {
-    id: e.id,
-    title: e.title,
-    precio: e.price,
-    img: e.image,
+    id: item.id,
+    title: item.title,
+    precio: item.price,
+    img: item.image,
     cantidad: 1,
   }
   addItemCarrito(newItem)
