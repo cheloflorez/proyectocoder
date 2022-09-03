@@ -29,5 +29,4 @@ function renderCarrito() {
     tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
   })
   CarritoTotal()
-  console.log(carrito)
 }
