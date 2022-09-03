@@ -9,6 +9,10 @@
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -38,7 +42,7 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="../index.html">Inicio</a>
                         <a class="nav-link" href="../vistas/menu.html">Menu</a>
@@ -46,12 +50,33 @@
                         <a class="nav-link" href="../vistas/contacto.html">Contacto</a>
                         <a class="nav-link" href="../vistas/login.html">Login</a>
                     </div>
+                    <div>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="../assets/Img/cart.jpeg" class="nav-link dropdown-toggle img-fluid"
+                                    height="70px" width="70px" href="#" id="dropdown01" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></img>
+                                <div class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table class="table table-hover mt-5 ">
+                                        <thead>
+                                            <tr class="text-primary">
+                                                <th scope="col">Productos</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Cantidad</th>
+                                                <th scope="col">Subtotal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody2">
+                                        </tbody>
+                                    </table>
+                                    <a href="./vistas/menu.html"  class="btn btn-primary btn-block">Ir al carrito</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
-        <div class="header_2">
-            <p>Nuestro equipo</p>
-        </div>
     </header>
     <!-- MAIN -->
     <main class="container">
@@ -125,6 +150,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="../js/carritoNav.js"></script>
 </body>
 
 </html>
